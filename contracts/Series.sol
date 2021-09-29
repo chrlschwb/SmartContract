@@ -1,14 +1,17 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity 0.6.0;
+pragma solidity 0.8.0;
 
-import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 
-contract Series is Ownable {
-  string name;
+contract Series is OwnableUpgradeable {
+
+  string private name;
   mapping(address=>address[]) plugins;
 
-  constructor(string memory _name) public {
-    name = _name;
+  function initialize(address owner_, string memory name_) public initializer {
+    __Ownable_init();
+    transferOwnership(owner_);
+    name = name_;
   }
 
   function getName() public view returns (string memory) {

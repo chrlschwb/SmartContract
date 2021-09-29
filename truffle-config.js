@@ -35,7 +35,6 @@ module.exports = {
    *
    * $ truffle test --network <network-name>
    */
-
   networks: {
     // Useful for testing. The `development` name is special - truffle uses it by default
     // if it's defined here and no other network is specified at the command line.
@@ -63,20 +62,20 @@ module.exports = {
     // Useful for deploying to a public network.
     // NB: It's important to wrap the provider as a function.
     ropsten: {
-       provider: () => new HDWalletProvider(mnemonicRopsten, `https://ropsten.infura.io/v3/f2e6a40391274a0793c63e923de0a170`),
+       provider: () => new HDWalletProvider(mnemonicRopsten, `https://ropsten.infura.io/v3/f1b0312e63e94d009ca4e0399d63e9cd`),
        network_id: 3,       // Ropsten's id
        gas: 5500000,        // Ropsten has a lower block limit than mainnet
-       gasPrice: 20000000000,
+       gasPrice: 8000000000,
        confirmations: 1,    // # of confs to wait between deployments. (default: 0)
        timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
        skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
      },
 
      main: {
-       provider: () => new HDWalletProvider(mnemonicMain, `https://mainnet.infura.io/v3/f2e6a40391274a0793c63e923de0a170`),
+       provider: () => new HDWalletProvider(mnemonicMain, `https://mainnet.infura.io/v3/f1b0312e63e94d009ca4e0399d63e9cd`),
        network_id: 1,       // Mainnet's id
        gas: 5500000,        // Ropsten has a lower block limit than mainnet
-       gasPrice: 20000000000,
+       gasPrice: 80000000000,
        confirmations: 1,    // # of confs to wait between deployments. (default: 0)
        timeoutBlocks:200,  // # of blocks before a deployment times out  (minimum/default: 50)
        skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
@@ -97,7 +96,7 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
-      version: "0.6.0",    // Fetch exact version from solc-bin (default: truffle's version)
+      version: "0.8.0",    // Fetch exact version from solc-bin (default: truffle's version)
       // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
       // settings: {          // See the solidity docs for advice about optimization and evmVersion
       //  optimizer: {
@@ -107,5 +106,11 @@ module.exports = {
       //  evmVersion: "byzantium"
       // }
     }
+  },
+  plugins: [
+    'truffle-plugin-verify'
+  ],
+  api_keys: {
+    etherscan: 'NNBRMRCRDMVX421H11ZU753YRN5GRKQ9E3'
   }
 }

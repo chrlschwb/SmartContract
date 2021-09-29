@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity 0.6.0;
+pragma solidity 0.8.0;
 
 import '@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol';
-import '@openzeppelin/contracts-upgradeable/proxy/Initializable.sol';
+import '@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol';
 /**
 @title Master Registry Contract
 @author Filipe Soccol
@@ -14,7 +14,7 @@ contract MasterRegistry is Initializable, OwnableUpgradeable {
 
     // Mapping PluginID => Pluggin contract address
     mapping(uint16=>address) private plugins;
-    // Mapping Series Address => PluginID => Deployd Contract Address 
+    // Mapping Series Address => PluginID => Deployd Contract Address
     mapping(address=>mapping(uint16=>address)) private records;
     // Mapping Series Address => PluginID => Content
     mapping(address=>mapping(uint16=>string)) private contents;
@@ -29,7 +29,7 @@ contract MasterRegistry is Initializable, OwnableUpgradeable {
      */
     modifier authorizedRecord(address _series, uint16 _key) {
         require(isSeriesOwner(_series) ||
-        isRecordItself(_series, _key) || 
+        isRecordItself(_series, _key) ||
         isRecordPlugin(_series, _key), "Not Authorized: Caller is not series owner, plugin or record itself");
         _;
     }

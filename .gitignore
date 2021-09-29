@@ -1,5 +1,7 @@
 contracts/.placeholder
 test/.placeholder
+migrations_data
 node_modules
 .secret.main
 .secret.test
+.vscode

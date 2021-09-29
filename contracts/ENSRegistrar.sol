@@ -1,19 +1,19 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity 0.6.0;
+pragma solidity 0.8.0;
 
 import '@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol';
-import '@openzeppelin/contracts-upgradeable/proxy/Initializable.sol';
+import '@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol';
 
 interface ENS {
-    function setSubnodeRecord(bytes32 node, bytes32 label, address owner, address resolver, uint64 ttl) external;
-    function setSubnodeOwner(bytes32 node, bytes32 label, address owner) external returns(bytes32);
-    function setOwner(bytes32 node, address owner) external;
-    function owner(bytes32 node) external view returns (address);
+    function setSubnodeRecord(bytes32 node_, bytes32 label_, address owner_, address resolver_, uint64 ttl_) external;
+    function setSubnodeOwner(bytes32 node_, bytes32 label_, address owner_) external returns(bytes32);
+    function setOwner(bytes32 node_, address owner_) external;
+    function owner(bytes32 node_) external view returns (address);
 }
 
 interface Resolver{
-    function setAddr(bytes32 node, address addr) external;
-    function setAddr(bytes32 node, uint coinType, bytes calldata a) external;
+    function setAddr(bytes32 node_, address addr_) external;
+    function setAddr(bytes32 node_, uint coinType_, bytes calldata a_) external;
 }
 
 
@@ -21,7 +21,7 @@ interface Resolver{
  * A registrar that allocates subdomains to the first person to claim them.
  */
 contract ENSRegistrar is Initializable, OwnableUpgradeable {
-    
+
     event NameClaimed(address indexed series, string value);
 
     // Master ENS registry
@@ -76,7 +76,7 @@ contract ENSRegistrar is Initializable, OwnableUpgradeable {
         defaultResolver.setAddr(node, addr);
         ens.setOwner(node, owner);
     }
-    
+
     /**
      * Register a name, and store the domain to reverse lookup.
      * @param domain The string containing the domain.
@@ -89,17 +89,17 @@ contract ENSRegistrar is Initializable, OwnableUpgradeable {
         seriesDomains[address(target)].push(domain);
         emit NameClaimed(address(target), domain);
     }
-    
+
     /**
-     * Return some domain from a series. As a single series could claim multiple domains, 
+     * Return some domain from a series. As a single series could claim multiple domains,
      * the resolve function here has a index parameter to point a specific domain to be retrieved.
-     * @param domain The string containing the domain.
+     * @param addr The string containing the domain.
      * @param index Domain index to be retrieved.
      */
     function resolve(address addr, uint8 index) public view returns(string memory) {
         return seriesDomains[addr][index];
     }
-    
+
     /**
      * Return how much domains the Series has registered using this Registrar.
      * @param addr The string containing the series address.

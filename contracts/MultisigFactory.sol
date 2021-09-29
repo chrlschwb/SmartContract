@@ -1,10 +1,13 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity 0.6.0;
+pragma solidity 0.8.0;
 
 import '@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol';
-import '@openzeppelin/contracts-upgradeable/proxy/Initializable.sol';
-import "./utils/GnosisSafeProxy.sol";
+import '@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol';
 import "./utils/IMasterRegistry.sol";
+
+interface IGnosisSafeProxyFactory {
+    function createProxy(address singleton, bytes memory data) external returns (address proxy);
+}
 
 contract MultisigFactory is Initializable, OwnableUpgradeable {
 
@@ -12,6 +15,7 @@ contract MultisigFactory is Initializable, OwnableUpgradeable {
 
     address private _gnosisMasterCopy;
     address private _registryContract;
+    address private _gnosisProxyFactory;
 
     modifier onlySeriesOwner(address _series) {
         require(OwnableUpgradeable(_series).owner() == _msgSender(), "Error: Only Series Owner could deploy tokens");
@@ -23,21 +27,16 @@ contract MultisigFactory is Initializable, OwnableUpgradeable {
         _gnosisMasterCopy = masterCopy;
     }
 
-    function updateGnosisMasterCopy(address newAddress) onlyOwner public {
+    function updateGnosisMasterCopy(address newAddress) public onlyOwner {
         _gnosisMasterCopy = newAddress;
     }
 
-    function updateRegistryContract(address newAddress) onlyOwner public {
+    function updateRegistryContract(address newAddress) public onlyOwner {
         _registryContract = newAddress;
     }
-    
-    function createMultisig(address _series, bytes memory data) onlySeriesOwner(_series) public {
-        GnosisSafeProxy proxy = new GnosisSafeProxy(_gnosisMasterCopy);
-        if (data.length > 0)
-            // solium-disable-next-line security/no-inline-assembly
-            assembly {
-                if eq(call(gas(), proxy, 0, add(data, 0x20), mload(data), 0, 0), 0) { revert(0,0) }
-            }
+
+    function createMultisig(address _series, bytes memory data) public onlySeriesOwner(_series) {
+        address proxy = IGnosisSafeProxyFactory(_gnosisProxyFactory).createProxy(_gnosisMasterCopy, data);
         if (_registryContract != address(0)){
             IMasterRegistry(_registryContract).setRecord(_series, 2, address(proxy));
         }
