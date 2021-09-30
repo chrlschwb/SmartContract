@@ -33,7 +33,7 @@ contract MasterRegistry is Initializable, OwnableUpgradeable {
         isRecordPlugin(_series, _key), "Not Authorized: Caller is not series owner, plugin or record itself");
         _;
     }
-    
+
     /**
      * @notice Modifier to allow only series owners to change content.
      * @param _series The plugin index to update.

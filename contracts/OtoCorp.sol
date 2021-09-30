@@ -18,15 +18,17 @@ contract OtoCorp is Ownable {
         seriesSource = _source;
     }
 
+    // TODO Require to be called from MasterRegistry
     function createSeries(string memory seriesName) external virtual {
         createSeries(msg.sender, seriesName);
     }
 
+    // TODO Require to be called from MasterRegistry
     function createSeries(address owner, string memory seriesName) public virtual {
         ISeries newContract = ISeries(Clones.clone(address(seriesSource)));
         ISeries(newContract).initialize(owner, seriesName);
         seriesOfMembers[owner].push(address(newContract));
-        emit NewSeriesCreated(address(newContract), newContract.owner(), newContract.getName());
+        emit NewSeriesCreated(address(newContract), owner, seriesName);
     }
 
     function updateSeriesSource(address _newSource) external onlyOwner {

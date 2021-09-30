@@ -15,7 +15,7 @@ contract OtoCorpWyoming is OtoCorp {
         ISeries(newContract).initialize(owner, newSeriesName);
         seriesIndex++;
         seriesOfMembers[owner].push(address(newContract));
-        emit NewSeriesCreated(address(newContract), newContract.owner(), newContract.getName());
+        emit NewSeriesCreated(address(newContract), owner, newSeriesName);
     }
 
     function getIndex() public view returns (string memory) {
