@@ -6,10 +6,10 @@ import "@openzeppelin/contracts/proxy/Clones.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
-
 contract OtoCorp is Ownable {
 
-    ISeries internal seriesSource;
+    ISeries public seriesSource;
+    address public registry;
     mapping(address=>address[]) internal seriesOfMembers;
 
     event NewSeriesCreated(address _contract, address _owner, string _name);
@@ -18,17 +18,19 @@ contract OtoCorp is Ownable {
         seriesSource = _source;
     }
 
-    // TODO Require to be called from MasterRegistry
-    function createSeries(string memory seriesName) external virtual {
-        createSeries(msg.sender, seriesName);
+    function createSeries(string memory seriesName) external onlyRegistry virtual {
+        createSeriesWithOwner(msg.sender, seriesName);
     }
 
-    // TODO Require to be called from MasterRegistry
-    function createSeries(address owner, string memory seriesName) public virtual {
+    function createSeriesWithOwner(address owner, string memory seriesName) public onlyRegistry virtual {
         ISeries newContract = ISeries(Clones.clone(address(seriesSource)));
         ISeries(newContract).initialize(owner, seriesName);
         seriesOfMembers[owner].push(address(newContract));
         emit NewSeriesCreated(address(newContract), owner, seriesName);
+    }
+
+    function updateRegistry(address _newRegistry) external onlyOwner {
+        registry = _newRegistry;
     }
 
     function updateSeriesSource(address _newSource) external onlyOwner {
@@ -37,6 +39,14 @@ contract OtoCorp is Ownable {
 
     function mySeries() public view returns (address[] memory) {
         return seriesOfMembers[msg.sender];
+    }
+
+    /**
+     * @dev Throws if called by any account other than the registry in case registry is defined.
+     */
+    modifier onlyRegistry() {
+        require(registry == address(0x0) || registry == msg.sender, "Registry: caller is not the registry");
+        _;
     }
 
 }

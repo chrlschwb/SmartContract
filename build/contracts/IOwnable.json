@@ -29,22 +29,22 @@
     "absolutePath": "/Users/filipemsoccol/Documents/doiim/otoco-smart-contracts/contracts/utils/IOwnable.sol",
     "exportedSymbols": {
       "IOwnable": [
-        1545
+        1655
       ]
     },
-    "id": 1546,
+    "id": 1656,
     "license": "UNLICENSED",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1539,
+        "id": 1649,
         "literals": [
           "solidity",
           "0.8",
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "39:22:11"
+        "src": "39:22:12"
       },
       {
         "abstract": false,
@@ -52,39 +52,39 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "fullyImplemented": false,
-        "id": 1545,
+        "id": 1655,
         "linearizedBaseContracts": [
-          1545
+          1655
         ],
         "name": "IOwnable",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "functionSelector": "8da5cb5b",
-            "id": 1544,
+            "id": 1654,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "owner",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1540,
+              "id": 1650,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "102:2:11"
+              "src": "102:2:12"
             },
             "returnParameters": {
-              "id": 1543,
+              "id": 1653,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1542,
+                  "id": 1652,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1544,
-                  "src": "128:7:11",
+                  "scope": 1654,
+                  "src": "128:7:12",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -92,10 +92,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1541,
+                    "id": 1651,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "128:7:11",
+                    "src": "128:7:12",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -105,41 +105,41 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "127:9:11"
+              "src": "127:9:12"
             },
-            "scope": 1545,
-            "src": "88:49:11",
+            "scope": 1655,
+            "src": "88:49:12",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 1546,
-        "src": "63:76:11"
+        "scope": 1656,
+        "src": "63:76:12"
       }
     ],
-    "src": "39:100:11"
+    "src": "39:100:12"
   },
   "legacyAST": {
     "absolutePath": "/Users/filipemsoccol/Documents/doiim/otoco-smart-contracts/contracts/utils/IOwnable.sol",
     "exportedSymbols": {
       "IOwnable": [
-        1545
+        1655
       ]
     },
-    "id": 1546,
+    "id": 1656,
     "license": "UNLICENSED",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1539,
+        "id": 1649,
         "literals": [
           "solidity",
           "0.8",
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "39:22:11"
+        "src": "39:22:12"
       },
       {
         "abstract": false,
@@ -147,39 +147,39 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "fullyImplemented": false,
-        "id": 1545,
+        "id": 1655,
         "linearizedBaseContracts": [
-          1545
+          1655
         ],
         "name": "IOwnable",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "functionSelector": "8da5cb5b",
-            "id": 1544,
+            "id": 1654,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "owner",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1540,
+              "id": 1650,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "102:2:11"
+              "src": "102:2:12"
             },
             "returnParameters": {
-              "id": 1543,
+              "id": 1653,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1542,
+                  "id": 1652,
                   "mutability": "mutable",
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1544,
-                  "src": "128:7:11",
+                  "scope": 1654,
+                  "src": "128:7:12",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -187,10 +187,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1541,
+                    "id": 1651,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "128:7:11",
+                    "src": "128:7:12",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -200,20 +200,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "127:9:11"
+              "src": "127:9:12"
             },
-            "scope": 1545,
-            "src": "88:49:11",
+            "scope": 1655,
+            "src": "88:49:12",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 1546,
-        "src": "63:76:11"
+        "scope": 1656,
+        "src": "63:76:12"
       }
     ],
-    "src": "39:100:11"
+    "src": "39:100:12"
   },
   "compiler": {
     "name": "solc",
@@ -221,7 +221,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.0",
-  "updatedAt": "2021-09-29T19:40:53.761Z",
+  "updatedAt": "2021-10-14T20:00:54.043Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

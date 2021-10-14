@@ -115,7 +115,7 @@
     "absolutePath": "/Users/filipemsoccol/Documents/doiim/otoco-smart-contracts/contracts/ENSRegistrar.sol",
     "exportedSymbols": {
       "ContextUpgradeable": [
-        1780
+        1890
       ],
       "ENS": [
         42
@@ -124,10 +124,10 @@
         412
       ],
       "Initializable": [
-        1736
+        1846
       ],
       "OwnableUpgradeable": [
-        1690
+        1800
       ],
       "Resolver": [
         59
@@ -153,7 +153,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 413,
-        "sourceUnit": 1691,
+        "sourceUnit": 1801,
         "src": "63:75:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -164,7 +164,7 @@
         "id": 3,
         "nodeType": "ImportDirective",
         "scope": 413,
-        "sourceUnit": 1737,
+        "sourceUnit": 1847,
         "src": "139:75:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -849,7 +849,7 @@
               "id": 61,
               "name": "Initializable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 1736,
+              "referencedDeclaration": 1846,
               "src": "862:13:0"
             },
             "id": 62,
@@ -861,7 +861,7 @@
               "id": 63,
               "name": "OwnableUpgradeable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 1690,
+              "referencedDeclaration": 1800,
               "src": "877:18:0"
             },
             "id": 64,
@@ -870,9 +870,9 @@
           }
         ],
         "contractDependencies": [
-          1690,
-          1736,
-          1780
+          1800,
+          1846,
+          1890
         ],
         "contractKind": "contract",
         "documentation": {
@@ -885,9 +885,9 @@
         "id": 412,
         "linearizedBaseContracts": [
           412,
-          1690,
-          1780,
-          1736
+          1800,
+          1890,
+          1846
         ],
         "name": "ENSRegistrar",
         "nodeType": "ContractDefinition",
@@ -1601,7 +1601,7 @@
                               "referencedDeclaration": 119,
                               "src": "1548:6:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_OwnableUpgradeable_$1690",
+                                "typeIdentifier": "t_contract$_OwnableUpgradeable_$1800",
                                 "typeString": "contract OwnableUpgradeable"
                               }
                             },
@@ -1612,7 +1612,7 @@
                             "lValueRequested": false,
                             "memberName": "owner",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 1615,
+                            "referencedDeclaration": 1725,
                             "src": "1548:12:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$__$returns$_t_address_$",
@@ -1754,7 +1754,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_OwnableUpgradeable_$1690",
+                    "typeIdentifier": "t_contract$_OwnableUpgradeable_$1800",
                     "typeString": "contract OwnableUpgradeable"
                   },
                   "typeName": {
@@ -1764,13 +1764,13 @@
                       "id": 117,
                       "name": "OwnableUpgradeable",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 1690,
+                      "referencedDeclaration": 1800,
                       "src": "1503:18:0"
                     },
-                    "referencedDeclaration": 1690,
+                    "referencedDeclaration": 1800,
                     "src": "1503:18:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_OwnableUpgradeable_$1690",
+                      "typeIdentifier": "t_contract$_OwnableUpgradeable_$1800",
                       "typeString": "contract OwnableUpgradeable"
                     }
                   },
@@ -1932,7 +1932,7 @@
                       "name": "__Ownable_init",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1595,
+                      "referencedDeclaration": 1705,
                       "src": "2267:14:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
@@ -3744,7 +3744,7 @@
                               "referencedDeclaration": 273,
                               "src": "3735:6:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_OwnableUpgradeable_$1690",
+                                "typeIdentifier": "t_contract$_OwnableUpgradeable_$1800",
                                 "typeString": "contract OwnableUpgradeable"
                               }
                             }
@@ -3752,7 +3752,7 @@
                           "expression": {
                             "argumentTypes": [
                               {
-                                "typeIdentifier": "t_contract$_OwnableUpgradeable_$1690",
+                                "typeIdentifier": "t_contract$_OwnableUpgradeable_$1800",
                                 "typeString": "contract OwnableUpgradeable"
                               }
                             ],
@@ -3846,7 +3846,7 @@
                             "referencedDeclaration": 273,
                             "src": "3791:6:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_OwnableUpgradeable_$1690",
+                              "typeIdentifier": "t_contract$_OwnableUpgradeable_$1800",
                               "typeString": "contract OwnableUpgradeable"
                             }
                           }
@@ -3854,7 +3854,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_OwnableUpgradeable_$1690",
+                              "typeIdentifier": "t_contract$_OwnableUpgradeable_$1800",
                               "typeString": "contract OwnableUpgradeable"
                             }
                           ],
@@ -3969,7 +3969,7 @@
                     "referencedDeclaration": 273,
                     "src": "3591:6:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_OwnableUpgradeable_$1690",
+                      "typeIdentifier": "t_contract$_OwnableUpgradeable_$1800",
                       "typeString": "contract OwnableUpgradeable"
                     }
                   }
@@ -4029,7 +4029,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_OwnableUpgradeable_$1690",
+                    "typeIdentifier": "t_contract$_OwnableUpgradeable_$1800",
                     "typeString": "contract OwnableUpgradeable"
                   },
                   "typeName": {
@@ -4039,13 +4039,13 @@
                       "id": 271,
                       "name": "OwnableUpgradeable",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 1690,
+                      "referencedDeclaration": 1800,
                       "src": "3523:18:0"
                     },
-                    "referencedDeclaration": 1690,
+                    "referencedDeclaration": 1800,
                     "src": "3523:18:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_OwnableUpgradeable_$1690",
+                      "typeIdentifier": "t_contract$_OwnableUpgradeable_$1800",
                       "typeString": "contract OwnableUpgradeable"
                     }
                   },
@@ -5237,7 +5237,7 @@
     "absolutePath": "/Users/filipemsoccol/Documents/doiim/otoco-smart-contracts/contracts/ENSRegistrar.sol",
     "exportedSymbols": {
       "ContextUpgradeable": [
-        1780
+        1890
       ],
       "ENS": [
         42
@@ -5246,10 +5246,10 @@
         412
       ],
       "Initializable": [
-        1736
+        1846
       ],
       "OwnableUpgradeable": [
-        1690
+        1800
       ],
       "Resolver": [
         59
@@ -5275,7 +5275,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 413,
-        "sourceUnit": 1691,
+        "sourceUnit": 1801,
         "src": "63:75:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -5286,7 +5286,7 @@
         "id": 3,
         "nodeType": "ImportDirective",
         "scope": 413,
-        "sourceUnit": 1737,
+        "sourceUnit": 1847,
         "src": "139:75:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -5971,7 +5971,7 @@
               "id": 61,
               "name": "Initializable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 1736,
+              "referencedDeclaration": 1846,
               "src": "862:13:0"
             },
             "id": 62,
@@ -5983,7 +5983,7 @@
               "id": 63,
               "name": "OwnableUpgradeable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 1690,
+              "referencedDeclaration": 1800,
               "src": "877:18:0"
             },
             "id": 64,
@@ -5992,9 +5992,9 @@
           }
         ],
         "contractDependencies": [
-          1690,
-          1736,
-          1780
+          1800,
+          1846,
+          1890
         ],
         "contractKind": "contract",
         "documentation": {
@@ -6007,9 +6007,9 @@
         "id": 412,
         "linearizedBaseContracts": [
           412,
-          1690,
-          1780,
-          1736
+          1800,
+          1890,
+          1846
         ],
         "name": "ENSRegistrar",
         "nodeType": "ContractDefinition",
@@ -6723,7 +6723,7 @@
                               "referencedDeclaration": 119,
                               "src": "1548:6:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_OwnableUpgradeable_$1690",
+                                "typeIdentifier": "t_contract$_OwnableUpgradeable_$1800",
                                 "typeString": "contract OwnableUpgradeable"
                               }
                             },
@@ -6734,7 +6734,7 @@
                             "lValueRequested": false,
                             "memberName": "owner",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 1615,
+                            "referencedDeclaration": 1725,
                             "src": "1548:12:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$__$returns$_t_address_$",
@@ -6876,7 +6876,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_OwnableUpgradeable_$1690",
+                    "typeIdentifier": "t_contract$_OwnableUpgradeable_$1800",
                     "typeString": "contract OwnableUpgradeable"
                   },
                   "typeName": {
@@ -6886,13 +6886,13 @@
                       "id": 117,
                       "name": "OwnableUpgradeable",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 1690,
+                      "referencedDeclaration": 1800,
                       "src": "1503:18:0"
                     },
-                    "referencedDeclaration": 1690,
+                    "referencedDeclaration": 1800,
                     "src": "1503:18:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_OwnableUpgradeable_$1690",
+                      "typeIdentifier": "t_contract$_OwnableUpgradeable_$1800",
                       "typeString": "contract OwnableUpgradeable"
                     }
                   },
@@ -7054,7 +7054,7 @@
                       "name": "__Ownable_init",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1595,
+                      "referencedDeclaration": 1705,
                       "src": "2267:14:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
@@ -8866,7 +8866,7 @@
                               "referencedDeclaration": 273,
                               "src": "3735:6:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_OwnableUpgradeable_$1690",
+                                "typeIdentifier": "t_contract$_OwnableUpgradeable_$1800",
                                 "typeString": "contract OwnableUpgradeable"
                               }
                             }
@@ -8874,7 +8874,7 @@
                           "expression": {
                             "argumentTypes": [
                               {
-                                "typeIdentifier": "t_contract$_OwnableUpgradeable_$1690",
+                                "typeIdentifier": "t_contract$_OwnableUpgradeable_$1800",
                                 "typeString": "contract OwnableUpgradeable"
                               }
                             ],
@@ -8968,7 +8968,7 @@
                             "referencedDeclaration": 273,
                             "src": "3791:6:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_OwnableUpgradeable_$1690",
+                              "typeIdentifier": "t_contract$_OwnableUpgradeable_$1800",
                               "typeString": "contract OwnableUpgradeable"
                             }
                           }
@@ -8976,7 +8976,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_OwnableUpgradeable_$1690",
+                              "typeIdentifier": "t_contract$_OwnableUpgradeable_$1800",
                               "typeString": "contract OwnableUpgradeable"
                             }
                           ],
@@ -9091,7 +9091,7 @@
                     "referencedDeclaration": 273,
                     "src": "3591:6:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_OwnableUpgradeable_$1690",
+                      "typeIdentifier": "t_contract$_OwnableUpgradeable_$1800",
                       "typeString": "contract OwnableUpgradeable"
                     }
                   }
@@ -9151,7 +9151,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_OwnableUpgradeable_$1690",
+                    "typeIdentifier": "t_contract$_OwnableUpgradeable_$1800",
                     "typeString": "contract OwnableUpgradeable"
                   },
                   "typeName": {
@@ -9161,13 +9161,13 @@
                       "id": 271,
                       "name": "OwnableUpgradeable",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 1690,
+                      "referencedDeclaration": 1800,
                       "src": "3523:18:0"
                     },
-                    "referencedDeclaration": 1690,
+                    "referencedDeclaration": 1800,
                     "src": "3523:18:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_OwnableUpgradeable_$1690",
+                      "typeIdentifier": "t_contract$_OwnableUpgradeable_$1800",
                       "typeString": "contract OwnableUpgradeable"
                     }
                   },
@@ -10361,7 +10361,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.0",
-  "updatedAt": "2021-09-29T19:40:53.511Z",
+  "updatedAt": "2021-10-14T20:00:53.767Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

@@ -1,9 +1,17 @@
 const OtoCorp = artifacts.require("OtoCorp");
+const Series = artifacts.require("Series");
 
 module.exports = async (callback) => {
 
+    const accounts = await web3.eth.getAccounts()
+
+    console.log(accounts[0])
+
     try {
-    await OtoCorp.new('0x13841f9d3e2a441800b209aad3020308edd6c328');
+        const seriesDeployed = await Series.new();
+        console.log(seriesDeployed.address)
+        const otocorpDeployed = await OtoCorp.new(seriesDeployed.address);
+        console.log(otocorpDeployed.address)
     } catch (err) {
         console.log(err)
     }
